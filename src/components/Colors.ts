@@ -5,6 +5,6 @@ export const Colors = {
 	quarta: "#3d5148",
 	quinta: "#9e875d",
 	sexta: "#77b79c",
-	sétima: "#bbf2be",
+	setima: "#bbf2be",
 	oitava: "#e4f2e9",
 };

@@ -1,14 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import CardLogo from "../components/CardLogo";
 import { Colors } from "../components/Colors";
-import { Box } from "../components/OldBox";
 export default function Screen1() {
 	return (
 		<View style={styles.container}>
 			<CardLogo />
-			<Box.Red />
-			<Box.Blue />
-			<Box.Green />
 		</View>
 	);
 }
