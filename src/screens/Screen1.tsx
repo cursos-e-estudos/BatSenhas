@@ -1,55 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
-
-function RedBox() {
-	return (
-		<View
-			style={{
-				width: 100,
-				height: 100,
-				backgroundColor: "red",
-				borderColor: "pink",
-				borderWidth: 5,
-			}}
-		></View>
-	);
-}
-function BlueBox() {
-	return (
-		<View
-			style={{
-				width: 100,
-				height: 100,
-				backgroundColor: "blue",
-				borderColor: "cyan",
-				borderWidth: 5,
-			}}
-		></View>
-	);
-}
-function GreenBox() {
-	return (
-		<View
-			style={{
-				width: 100,
-				height: 100,
-				backgroundColor: "green",
-				borderColor: "lightgreen",
-				borderWidth: 5,
-			}}
-		></View>
-	);
-}
-
+import CardLogo from "../components/CardLogo";
+import { Colors } from "../components/Colors";
+import { Box } from "../components/OldBox";
 export default function Screen1() {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.text}>Flex vertical padrão</Text>
-			<RedBox />
-			<GreenBox />
-			<BlueBox />
-			<View style={{ alignSelf: "flex-end" }}>
-				<GreenBox />
-			</View>
+			<CardLogo />
+			<Box.Red />
+			<Box.Blue />
+			<Box.Green />
 		</View>
 	);
 }
@@ -57,16 +16,8 @@ export default function Screen1() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#000",
-		borderColor: "purple",
-		borderWidth: 20,
-		alignItems: "flex-start",
+		backgroundColor: Colors.segunda,
+		alignItems: "center",
 		justifyContent: "center",
-	},
-	text: {
-		fontSize: 18,
-		fontWeight: "bold",
-		color: "white",
-		textAlign: "center",
 	},
 });
