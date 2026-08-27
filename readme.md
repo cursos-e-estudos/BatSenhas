@@ -8,11 +8,11 @@
     >
     <img 
       alt="Project top programing language" 
-      src="https://img.shields.io/github/languages/top/felipeAguiarCode/react-native-bat-pass-generator?color=6A57D5"
+      src="https://img.shields.io/github/languages/top/cursos-e-estudos/BatSenhas?color=6A57D5"
     >
     <img 
       alt="Repository size" 
-      src="https://img.shields.io/github/repo-size/felipeAguiarCode/react-native-bat-pass-generator?color=6A57D5"
+      src="https://img.shields.io/github/repo-size/cursos-e-estudos/BatSenhas?color=6A57D5"
     >
     <img 
       alt="GitHub license" 
@@ -20,25 +20,27 @@
     >
 </p>
 
-</div>
-
 ## Preview
 
-<div align="center">
-  <a href="#">
-  <p>Versão celular</p>
-      <img src=".github/assets/print1.png" height="500" alt="preview" />
-  </a>
-
-<a href="#">
-    <p>Versão tablet</p>
-  <img src=".github/assets/print2.jpg" height="500" alt="preview" />
-  </a>
+  <table>
+    <tr>
+      <td align="center"><b>Versão celular</b></td>
+      <td align="center"><b>Versão tablet</b></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src=".github/assets/print1.png" height="400" alt="Preview versão celular" />
+      </td>
+      <td align="center">
+        <img src=".github/assets/print2.jpg" height="400" alt="Preview versão tablet" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ## 📱 Features
-- ✅ Gera senhas aleatórias;
-- ✅ Permite copiar para área de transferência;
+✅ Gera senhas aleatórias;</br>
+✅ Permite copiar para área de transferência;
 
 ## Tecnologias
 
