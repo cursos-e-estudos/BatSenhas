@@ -49,4 +49,4 @@
 
 | [<img src="https://avatars.githubusercontent.com/u/29991853?s=96&v=4"><br><sub>Biel Souza</sub>](https://github.com/felipeAguiarCode) |
 | :---------------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [Linkedin](www.linkedin.com/in/gabrie-souza-mobiledev)                                             |
+|                                             [Linkedin](www.linkedin.com/in/gabriel-souza-mobiledev)                                             |
