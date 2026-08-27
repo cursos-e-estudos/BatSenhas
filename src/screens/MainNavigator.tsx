@@ -15,15 +15,6 @@ export default function MainNavigator() {
 	return (
 		<TopTab.Navigator
 			screenOptions={{
-				// Cabeçalho (Header)
-				headerStyle: {
-					backgroundColor: "black",
-					elevation: 0,
-					shadowColor: "transparent",
-				},
-				headerTintColor: "#ffffff",
-				headerTitleAlign: "center",
-
 				// Barra de Abas (Tab Bar)
 				tabBarStyle: {
 					backgroundColor: "black",

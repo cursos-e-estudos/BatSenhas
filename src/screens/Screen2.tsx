@@ -17,6 +17,7 @@ export default function Screen2() {
 				style={{
 					flexDirection: "row",
 					justifyContent: "space-around",
+					alignItems: "center",
 					backgroundColor: "black",
 					padding: 10,
 				}}
