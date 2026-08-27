@@ -15,6 +15,7 @@ export default function CardTextInput({
 				onChangeText={onChangeText}
 				placeholder={placeholder}
 				secureTextEntry={secureTextEntry}
+				placeholderTextColor={Colors.setima}
 			/>
 		</View>
 	);
@@ -22,7 +23,7 @@ export default function CardTextInput({
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: Colors.terceira,
+		backgroundColor: Colors.segunda,
 		borderRadius: 10,
 		padding: 10,
 		margin: 10,

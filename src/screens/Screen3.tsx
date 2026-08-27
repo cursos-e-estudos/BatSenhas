@@ -1,20 +1,46 @@
-import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
-import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { CardLogo, CardTextInput, Colors } from "../components";
+import * as Clipboard from "expo-clipboard";
+import { useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { CardLogo, CardTextInput, Colors, MyButton } from "../components";
 
 export default function Screen3() {
+	const [password, setPassword] = useState("");
+	const [aviso, setAviso] = useState("");
+
+	function handleGeneratePassword() {
+		setPassword(Math.random().toString(36).slice(-8)); // Gera uma senha aleatória de 8 caracteres
+		setAviso("");
+	}
+	async function handleCopyPassword() {
+		setAviso("Senha copiada para área de transferência");
+
+		await Clipboard.setStringAsync(password); // Copia a senha para a área de transferência
+		setTimeout(() => {
+			setAviso(""); // Limpa o aviso após 2000 milissegundos
+		}, 2000);
+	}
+
 	return (
 		<View style={styles.container}>
 			<CardLogo />
 			<View style={styles.cardInput}>
-				<CardTextInput placeholder="Senha para que?" />
+				<CardTextInput
+					placeholder="Senha para que?"
+					value={password}
+					onChangeText={setPassword}
+				/>
 
-				<TouchableOpacity
-					style={styles.myButton}
-					onPress={() => Alert.alert("Pressed")}
-				>
-					<Text>Gerar</Text>
-				</TouchableOpacity>
+				<MyButton
+					title="GERAR"
+					icon="refresh"
+					onPress={() => handleGeneratePassword()}
+				/>
+				<MyButton
+					title="COPIAR"
+					icon="content-copy"
+					onPress={() => handleCopyPassword()}
+				/>
+				{aviso ? <Text style={styles.cardAviso}>{aviso}</Text> : null}
 			</View>
 		</View>
 	);
@@ -37,10 +63,12 @@ const styles = StyleSheet.create({
 		borderWidth: 2,
 		borderColor: Colors.sexta,
 	},
-	myButton: {
-		backgroundColor: Colors.quinta,
-		borderRadius: 10,
+	cardAviso: {
+		backgroundColor: Colors.setima,
+		textAlign: "center",
 		padding: 10,
-		margin: 10,
+		borderRadius: 10,
+		borderWidth: 2,
+		borderColor: Colors.sexta,
 	},
 });

@@ -1,14 +1,11 @@
 //Imports de navegação
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
-import { Text } from "react-native";
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
 import Screen3 from "./Screen3";
 
 // Cria o navegador sem passar nenhuma tipagem complexa de rotas
-const Tab = createBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
 
 import { Colors } from "../components";
@@ -37,7 +34,8 @@ export default function MainNavigator() {
 				},
 			}}
 		>
-			<TopTab.Screen name="Minha Versão" component={Screen1} />
+			{/*
+				<TopTab.Screen name="Minha Versão" component={Screen1} />*/}
 			<TopTab.Screen name="Versão tutorial" component={Screen3} />
 			<TopTab.Screen name="Cores 🟥🟩🟦" component={Screen2} />
 		</TopTab.Navigator>
