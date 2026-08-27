@@ -6,6 +6,7 @@ export default function Screen1() {
 			<CardLogo />
 			<View style={styles.cardInput}>
 				<CardTextInput placeholder="Digite algo..." />
+				<CardTextInput placeholder="Digite algo..." />
 			</View>
 		</View>
 	);
