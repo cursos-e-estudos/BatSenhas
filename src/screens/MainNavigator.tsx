@@ -5,45 +5,41 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { Text } from "react-native";
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
+import Screen3 from "./Screen3";
 
 // Cria o navegador sem passar nenhuma tipagem complexa de rotas
 const Tab = createBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
 
+import { Colors } from "../components";
+
 //TODO: onde fica o theme de navigation
 export default function MainNavigator() {
 	return (
 		<TopTab.Navigator
+			initialRouteName="Minha Versão"
 			screenOptions={{
 				// Barra de Abas (Tab Bar)
 				tabBarStyle: {
-					backgroundColor: "black",
-					borderTopColor: "black",
+					backgroundColor: Colors.primeira,
 					height: 60,
 				},
-				tabBarActiveTintColor: "#ffffff",
-				tabBarInactiveTintColor: "#888888",
-				tabBarShowLabel: false,
+				tabBarActiveTintColor: Colors.setima,
+				tabBarInactiveTintColor: Colors.oitava,
 
 				tabBarItemStyle: {
-					paddingTop: 8,
+					paddingTop: 18,
+				},
+				tabBarScrollEnabled: true,
+				tabBarIndicatorStyle: {
+					backgroundColor: Colors.quinta,
+					height: "100%",
 				},
 			}}
 		>
-			<TopTab.Screen
-				name="Tela 1️⃣"
-				component={Screen1}
-				options={{
-					tabBarIcon: () => <Text style={{ fontSize: 20 }}>1️⃣</Text>,
-				}}
-			/>
-			<TopTab.Screen
-				name="Tela 2️⃣"
-				component={Screen2}
-				options={{
-					tabBarIcon: () => <Text style={{ fontSize: 20 }}>2️⃣</Text>,
-				}}
-			/>
+			<TopTab.Screen name="Minha Versão" component={Screen1} />
+			<TopTab.Screen name="Versão tutorial" component={Screen3} />
+			<TopTab.Screen name="Cores 🟥🟩🟦" component={Screen2} />
 		</TopTab.Navigator>
 	);
 }

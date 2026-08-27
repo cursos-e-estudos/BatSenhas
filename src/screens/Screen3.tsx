@@ -1,15 +1,19 @@
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
-import { Alert, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { CardLogo, CardTextInput, Colors } from "../components";
 
-export default function Screen1() {
+export default function Screen3() {
 	return (
 		<View style={styles.container}>
 			<CardLogo />
 			<View style={styles.cardInput}>
 				<CardTextInput placeholder="Senha para que?" />
-				<TouchableOpacity onPress={() => Alert.alert("Pressed")}>
-					<Icon name="bat" size={50} color={Colors.quinta} />
+
+				<TouchableOpacity
+					style={styles.myButton}
+					onPress={() => Alert.alert("Pressed")}
+				>
+					<Text>Gerar</Text>
 				</TouchableOpacity>
 			</View>
 		</View>
@@ -26,13 +30,17 @@ const styles = StyleSheet.create({
 	cardInput: {
 		backgroundColor: Colors.quarta,
 		marginBottom: 100,
-		flexDirection: "row",
 		alignItems: "center",
-		justifyContent: "space-between",
 		width: "80%",
 		padding: 10,
 		borderRadius: 10,
 		borderWidth: 2,
 		borderColor: Colors.sexta,
+	},
+	myButton: {
+		backgroundColor: Colors.quinta,
+		borderRadius: 10,
+		padding: 10,
+		margin: 10,
 	},
 });
